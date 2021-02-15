@@ -6,7 +6,7 @@ services:
     build:
       context: ..
       dockerfile: docker/Dockerfile
-    network_mode: host
+    
     dns: 127.0.0.1
     ports:
       - "8080:8080"
@@ -16,15 +16,15 @@ services:
       - postgres
 
   redis:
-    network_mode: host
+    
     image: redis:alpine
 
   rabbitmq:
-    network_mode: host
+    
     image: rabbitmq:alpine
 
   postgres:
-    network_mode: host
+
     image: postgres:alpine
     environment:
       - POSTGRES_USER=internetnl
