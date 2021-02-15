@@ -15,15 +15,12 @@ services:
       - postgres
 
   redis:
-    network_mode: host
     image: redis:alpine
 
   rabbitmq:
-    network_mode: host
     image: rabbitmq:alpine
 
   postgres:
-    network_mode: host
     image: postgres:alpine
     environment:
       - POSTGRES_USER=internetnl
